@@ -59,6 +59,11 @@ namespace CodeGenerator.Services
                 return ex.Message;
             }
         }
+        private int SumData()
+        {
+            int value = 1;
+            return value / 0;
+        }
 
         //public void CallOpenAIAPI()
         //{

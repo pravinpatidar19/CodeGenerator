@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<IOpenAIService, OpenAIService>();
+builder.Services.AddScoped<IPullRequestService, PullRequestService>();
 
 var configuration = builder.Configuration;
 string allowedOrigins = configuration.GetValue<string>("AllowedOrigins");

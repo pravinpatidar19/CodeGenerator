@@ -13,7 +13,7 @@ const PRReview: React.FC = () => {
         setLoading(true);
 
         try {
-            const response = await axios.get("https://localhost:7124/api/pullrequests/review", {
+            const response = await axios.get("https://localhost:7124/api/pullrequest/review", {
                 params: { owner, repo, prNumber },
             });
             setReview(response.data.Review);
