@@ -13,10 +13,10 @@ const PRReview: React.FC = () => {
         setLoading(true);
 
         try {
-            const response = await axios.get("https://localhost:7124/api/pullrequest/review", {
+            const response = await axios.get("https://localhost:7124/api/pullrequest/review-changes", {
                 params: { owner, repo, prNumber },
             });
-            setReview(response.data.Review);
+            setReview(response.data);
         } catch (error) {
             console.error("Error:", error);
             setReview("Failed to get review.");

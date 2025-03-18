@@ -39,7 +39,7 @@ namespace CodeGenerator.Services
                         new { role = "user", content = input }
                     },
                     temperature = 0.7,
-                    max_tokens = 100,
+                    max_tokens = 1000,
                     top_p = 1.0,
                     frequency_penalty = 0.0,
                     presence_penalty = 0.0
@@ -56,14 +56,11 @@ namespace CodeGenerator.Services
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                //return ex.Message;
+                return "An error occurred while fetching the pull request files.";
             }
         }
-        private int SumData()
-        {
-            int value = 1;
-            return value / 0;
-        }
+
 
         //public void CallOpenAIAPI()
         //{
