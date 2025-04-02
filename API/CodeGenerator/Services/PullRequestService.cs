@@ -143,13 +143,10 @@ namespace CodeGenerator.Services
             return response.IsSuccessStatusCode;
         }
         
-         private void TestFunciont()
+         private void Calculation()
          {
-             int[] numbers = new int[6] { 1, 2, 3, 4, 5, 6 };
-             for(int i = 0; i <= numbers.Length; i++)
-             {
-                 Console.WriteLine(numbers[i]);
-             }
+             int value = 10;
+             var result = value / 0;
          }
          
     }
